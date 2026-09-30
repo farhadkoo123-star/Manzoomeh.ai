@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f6f7fb">
+<title>دستیار پژوهشی | گفت‌وگوی هوشمند</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script>
+<style>
+:root{--ink:#182238;--muted:#758097;--line:#e7eaf1;--paper:#fff;--wash:#f6f7fb;--brand:#5146d8;--brand2:#7269f2;--mint:#eaf8f5;--shadow:0 18px 55px rgba(37,45,78,.09);--radius:22px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 90% 0%,rgba(111,103,242,.09),transparent 32%),radial-gradient(ellipse at 5% 65%,rgba(16,185,170,.07),transparent 28%),var(--wash);color:var(--ink);font-family:'Vazirmatn',sans-serif;line-height:1.8}button,textarea{font:inherit}button{cursor:pointer}button:focus-visible,textarea:focus-visible{outline:3px solid rgba(81,70,216,.22);outline-offset:2px}.app-shell{width:min(1040px,calc(100% - 36px));margin:26px auto 40px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:5px 3px 20px}.brand{display:flex;align-items:center;gap:12px}.brand-mark{width:46px;height:46px;border-radius:16px;display:grid;place-items:center;color:#fff;background:linear-gradient(145deg,#7770f5,#473dc6);box-shadow:0 8px 20px rgba(81,70,216,.25)}.brand-mark svg{width:23px;height:23px}.brand-title{font-weight:800;font-size:1.02rem;line-height:1.45}.brand-caption{font-size:.77rem;color:var(--muted)}.status-pill{display:flex;align-items:center;gap:8px;padding:7px 13px;border:1px solid #dcefe9;border-radius:99px;background:#f1fbf8;color:#25856e;font-size:.78rem;font-weight:600}.status-dot{width:8px;height:8px;border-radius:50%;background:#36bd91;box-shadow:0 0 0 4px rgba(54,189,145,.12)}.main-card{overflow:hidden;border:1px solid rgba(226,229,239,.9);border-radius:26px;background:rgba(255,255,255,.92);box-shadow:var(--shadow)}.tabs{display:flex;gap:6px;padding:12px 22px;border-bottom:1px solid var(--line);background:rgba(250,251,254,.85)}.tab-btn{display:flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:12px;padding:10px 17px;background:transparent;color:var(--muted);font-weight:600;transition:.2s}.tab-btn svg{width:18px;height:18px}.tab-btn.active{background:#eeedff;color:var(--brand)}.tab-view{display:none}.tab-view.active{display:block;animation:rise .28s ease}@keyframes rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+.chat-view{height:min(740px,calc(100vh - 230px));min-height:530px;display:flex;flex-direction:column}.tab-view.chat-view.active{display:flex}.conversation{flex:1;overflow-y:auto;padding:30px clamp(18px,5vw,62px) 20px;scroll-behavior:smooth}.welcome{text-align:center;max-width:650px;margin:24px auto 38px}.welcome-icon{margin:0 auto 14px;width:62px;height:62px;display:grid;place-items:center;border-radius:21px;background:linear-gradient(145deg,#efefff,#e9f7f6);color:var(--brand)}.welcome-icon svg{width:29px;height:29px}.welcome h1{font-size:clamp(1.35rem,3vw,1.8rem);line-height:1.5;margin:0 0 8px;font-weight:800;letter-spacing:-.4px}.welcome p{margin:0 auto;color:var(--muted);font-size:.94rem;max-width:540px}.prompt-label{font-size:.79rem;color:#8a92a5;margin:20px 0 10px}.suggestions{display:flex;justify-content:center;flex-wrap:wrap;gap:9px}.chip{border:1px solid #e5e7f0;border-radius:99px;padding:8px 13px;background:#fff;color:#4b5670;font-size:.81rem;transition:.2s}.chip:hover{border-color:#c9c5ff;background:#f7f6ff;color:var(--brand);transform:translateY(-1px)}.messages{display:flex;flex-direction:column;gap:23px}.message{display:flex;gap:11px;align-items:flex-start;animation:rise .25s ease}.message.user{flex-direction:row-reverse}.avatar{width:34px;height:34px;flex:0 0 34px;border-radius:12px;display:grid;place-items:center;background:#efefff;color:var(--brand)}.avatar svg{width:18px;height:18px}.message.user .avatar{background:#eaf7f4;color:#27866f}.message-body{max-width:min(82%,700px)}.message.user .message-body{display:flex;flex-direction:column;align-items:flex-start}.message-label{font-size:.74rem;color:#9098aa;margin:0 4px 5px}.bubble{border:1px solid #e8eaf1;background:#fff;border-radius:17px;padding:13px 17px;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.95;color:#303b52;font-size:.92rem;box-shadow:0 4px 14px rgba(33,42,74,.035)}.message.user .bubble{background:#f0efff;border-color:#e5e3ff;border-radius:17px;color:#302b65}.answer-tools{display:flex;gap:7px;margin:10px 3px 0;flex-wrap:wrap}.tool-btn{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border:1px solid #e7e9f0;background:#fff;border-radius:9px;color:#6a7488;font-size:.75rem;transition:.2s}.tool-btn:hover{color:var(--brand);border-color:#cfcaff;background:#faf9ff}.tool-btn svg{width:14px;height:14px}.sources-wrap{margin:14px 2px 0}.sources-heading{display:flex;align-items:center;gap:7px;color:#677187;font-size:.8rem;font-weight:700;margin-bottom:9px}.sources-heading svg{width:16px;height:16px;color:var(--brand)}.sources-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:8px}.source-card{min-width:0;padding:10px 12px;border:1px solid #e8eaf0;border-radius:12px;background:#fbfcfe}.source-number{display:inline-block;margin-bottom:4px;padding:1px 7px;border-radius:6px;background:#efefff;color:var(--brand);font-size:.7rem;font-weight:700}.source-title{font-size:.81rem;font-weight:700;color:#3c465d;overflow-wrap:anywhere}.source-snippet{font-size:.75rem;color:#828b9e;overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;line-height:1.7;margin-top:2px}.typing{display:flex;align-items:center;gap:5px;padding:15px 17px;min-width:68px}.typing span{width:7px;height:7px;border-radius:50%;background:#8e88e6;animation:bounce 1s infinite ease-in-out}.typing span:nth-child(2){animation-delay:.15s}.typing span:nth-child(3){animation-delay:.3s}@keyframes bounce{0%,60%,100%{transform:translateY(0);opacity:.55}30%{transform:translateY(-5px);opacity:1}}.composer-area{border-top:1px solid var(--line);padding:15px clamp(16px,4vw,45px) 17px;background:linear-gradient(0deg,#fff 80%,rgba(255,255,255,.86))}.composer{display:flex;align-items:flex-end;gap:10px;padding:9px 10px 9px 12px;border:1px solid #dfe3ec;border-radius:17px;background:#fff;box-shadow:0 5px 18px rgba(32,42,76,.055);transition:.2s}.composer:focus-within{border-color:#aaa4fa;box-shadow:0 0 0 4px rgba(81,70,216,.08)}.composer textarea{flex:1;min-height:42px;max-height:140px;resize:none;border:0;outline:0;padding:8px 9px;color:var(--ink);background:transparent;line-height:1.7;font-size:.91rem}.composer textarea::placeholder{color:#a0a7b6}.send-btn{width:43px;height:43px;flex:0 0 43px;display:grid;place-items:center;border:0;border-radius:13px;color:#fff;background:linear-gradient(145deg,#7168ed,#4d42ca);box-shadow:0 5px 12px rgba(81,70,216,.22);transition:.2s}.send-btn:hover{transform:translateY(-1px);filter:brightness(1.04)}.send-btn:disabled{opacity:.55;cursor:wait}.send-btn svg{width:19px;height:19px}.composer-hint{text-align:center;font-size:.7rem;color:#a0a6b4;margin-top:7px}.upload-view{padding:clamp(22px,5vw,42px);min-height:500px}.upload-heading{display:flex;align-items:center;gap:12px;margin-bottom:8px}.upload-heading .upload-icon{width:45px;height:45px;display:grid;place-items:center;border-radius:15px;background:#efefff;color:var(--brand)}.upload-icon svg{width:22px;height:22px}.upload-heading h2{font-size:1.25rem;margin:0;font-weight:800}.upload-description{margin:0 0 20px;color:var(--muted);font-size:.89rem}.upload-description code{direction:ltr;display:inline-block;padding:1px 6px;border-radius:5px;background:#f0f1f6;color:#5c6372}.textarea-custom{width:100%;min-height:230px;resize:vertical;border:1px solid #e1e5ee;border-radius:15px;padding:15px;background:#fbfcfe;color:var(--ink);line-height:1.9;outline:0}.textarea-custom:focus{border-color:#aaa4fa;box-shadow:0 0 0 4px rgba(81,70,216,.08)}.upload-actions{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-top:17px}.primary-btn{display:inline-flex;align-items:center;gap:9px;border:0;border-radius:12px;padding:12px 18px;background:linear-gradient(135deg,#6258e5,#4439bf);color:white;font-weight:600;box-shadow:0 6px 15px rgba(81,70,216,.19)}.primary-btn svg{width:18px;height:18px}.upload-status{font-size:.85rem;font-weight:600;color:var(--muted)}.toast{position:fixed;z-index:10;bottom:23px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;display:flex;align-items:center;gap:8px;padding:10px 17px;border-radius:99px;background:#20283a;color:#fff;box-shadow:0 9px 24px rgba(0,0,0,.18);font-size:.84rem;transition:.25s}.toast.show{opacity:1;transform:translate(-50%,0)}.toast svg{width:17px;height:17px;color:#69daa9}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:640px){.app-shell{width:calc(100% - 18px);margin:10px auto 20px}.topbar{padding:5px 3px 13px}.brand-mark{width:41px;height:41px;border-radius:14px}.brand-title{font-size:.9rem}.brand-caption{font-size:.7rem}.status-pill{font-size:.69rem;padding:6px 9px}.main-card{border-radius:20px}.tabs{padding:9px;gap:4px}.tab-btn{padding:9px 8px;font-size:.76rem;gap:6px}.tab-btn svg{width:16px;height:16px}.chat-view{height:calc(100dvh - 165px);min-height:490px}.conversation{padding:20px 14px 14px}.welcome{margin:15px auto 28px}.welcome-icon{width:54px;height:54px;border-radius:18px}.welcome p{font-size:.84rem}.chip{font-size:.73rem;padding:7px 10px}.message-body{max-width:87%}.bubble{padding:11px 13px;font-size:.86rem}.avatar{width:31px;height:31px;flex-basis:31px}.sources-grid{grid-template-columns:1fr}.composer-area{padding:11px 12px 13px}.composer{gap:7px;padding:7px}.composer textarea{font-size:.86rem}.send-btn{width:40px;height:40px;flex-basis:40px}.upload-view{min-height:calc(100dvh - 170px);padding:22px 17px}.upload-heading h2{font-size:1.05rem}.upload-actions{align-items:flex-start;flex-direction:column}.primary-btn{width:100%;justify-content:center}.upload-status{min-height:24px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<div class="app-shell">
+  <header class="topbar">
+    <div class="brand"><div class="brand-mark"><i data-lucide="sparkles"></i></div><div><div class="brand-title">دستیار پژوهشی هوشمند</div><div class="brand-caption">کاوش در فیش‌ها و منابع شما</div></div></div>
+    <div class="status-pill"><span class="status-dot"></span><span>آمادهٔ گفت‌وگو</span></div>
+  </header>
+  <main class="main-card">
+    <nav class="tabs" aria-label="بخش‌های برنامه">
+      <button class="tab-btn active" type="button" data-tab="search" aria-selected="true"><i data-lucide="messages-square"></i><span>گفت‌وگوی پژوهشی</span></button>
+      <button class="tab-btn" type="button" data-tab="upload" aria-selected="false"><i data-lucide="database"></i><span>ورود فیش‌ها</span></button>
+    </nav>
+    <section id="tab-search" class="tab-view chat-view active" aria-label="گفت‌وگوی پژوهشی">
+      <div class="conversation" id="conversation" aria-live="polite" aria-relevant="additions">
+        <div class="welcome" id="welcome">
+          <div class="welcome-icon"><i data-lucide="book-open-check"></i></div>
+          <h1>چه موضوعی را بررسی کنیم؟</h1>
+          <p>پرسش خود را مطرح کنید تا با تکیه بر فیش‌ها و منابع ذخیره‌شده، پاسخی مستند و تحلیلی آماده کنم.</p>
+          <div class="prompt-label">برای شروع، یکی از این پیشنهادها را انتخاب کنید</div>
+          <div class="suggestions">
+            <button class="chip" type="button" data-query="عوامل موثر بر عزت اجتماعی در قرآن">عوامل عزت اجتماعی در قرآن</button>
+            <button class="chip" type="button" data-query="نقش توکل در کاهش اضطراب و بهداشت روان">توکل و بهداشت روان</button>
+            <button class="chip" type="button" data-query="مفهوم صبر فعال در دیدگاه‌های نوین">مفهوم صبر فعال</button>
+          </div>
+        </div>
+        <div class="messages" id="messages"></div>
+      </div>
+      <div class="composer-area">
+        <form class="composer" id="chatForm">
+          <label class="sr-only" for="queryInput">پرسش پژوهشی شما</label>
+          <textarea id="queryInput" rows="1" placeholder="پرسش یا موضوع پژوهشی خود را بنویسید…" autocomplete="off"></textarea>
+          <button class="send-btn" id="sendBtn" type="submit" aria-label="ارسال پرسش"><i data-lucide="arrow-up"></i></button>
+        </form>
+        <div class="composer-hint">Enter برای ارسال <span aria-hidden="true">·</span> Shift + Enter برای رفتن به خط بعد</div>
+      </div>
+    </section>
+    <section id="tab-upload" class="tab-view upload-view" aria-label="ورود دسته‌ای فیش‌ها">
+      <div class="upload-heading"><div class="upload-icon"><i data-lucide="cloud-upload"></i></div><h2>ذخیره‌سازی منابع و فیش‌ها</h2></div>
+      <p class="upload-description">متن فیش‌ها را وارد کنید. برای جداسازی هر فیش از فیش دیگر، از علامت <code>###</code> استفاده فرمایید.</p>
+      <label class="sr-only" for="bulkText">متن فیش‌ها</label>
+      <textarea id="bulkText" class="textarea-custom" rows="10" placeholder="فیش اول: متن، منبع و توضیحات…&#10;###&#10;فیش دوم: متن منبع بعدی…"></textarea>
+      <div class="upload-actions"><button class="primary-btn" id="uploadBtn" type="button"><i data-lucide="check"></i><span>بارگذاری و ذخیره در پایگاه داده</span></button><span id="uploadStatus" class="upload-status" role="status"></span></div>
+    </section>
+  </main>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"><i data-lucide="check-circle-2"></i><span id="toastMsg">انجام شد</span></div>
+<script>
+'use strict';
+// نشانی وب‌اپ گوگل (حفظ‌شده از نسخهٔ اصلی)
+const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxnzcP3TNcL1DMRJa-41md6RWVeKqS1YiXaAAdtC_2MPJSm81VIpYeKJzR6KC9tXYjC/exec";
+const conversation = document.getElementById('conversation');
+const messages = document.getElementById('messages');
+const queryInput = document.getElementById('queryInput');
+const sendBtn = document.getElementById('sendBtn');
+let latestAnswer = '';
+let toastTimer;
+if (window.lucide) lucide.createIcons();
+function icon(name, className='') {
+  const i = document.createElement('i'); i.setAttribute('data-lucide', name); if (className) i.className = className; return i;
+}
+function renderIcons(root=document) { if (window.lucide) lucide.createIcons({root}); }
+function showToast(message) {
+  const toast = document.getElementById('toast');
+  document.getElementById('toastMsg').textContent = String(message ?? '');
+  toast.classList.add('show'); clearTimeout(toastTimer); toastTimer = setTimeout(() => toast.classList.remove('show'), 2800);
+}
+function switchTab(tabId) {
+  const isSearch = tabId === 'search';
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    const active = btn.dataset.tab === (isSearch ? 'search' : 'upload');
+    btn.classList.toggle('active', active); btn.setAttribute('aria-selected', String(active));
+  });
+  document.getElementById('tab-search').classList.toggle('active', isSearch);
+  document.getElementById('tab-upload').classList.toggle('active', !isSearch);
+  renderIcons();
+}
+document.querySelectorAll('.tab-btn').forEach(btn => btn.addEventListener('click', () => switchTab(btn.dataset.tab)));
+function addMessage(role, text, options={}) {
+  const row = document.createElement('article'); row.className = `message ${role}`;
+  const avatar = document.createElement('div'); avatar.className = 'avatar'; avatar.setAttribute('aria-hidden','true'); avatar.append(icon(role === 'user' ? 'user-round' : 'sparkles'));
+  const body = document.createElement('div'); body.className = 'message-body';
+  const label = document.createElement('div'); label.className = 'message-label'; label.textContent = role === 'user' ? 'شما' : 'دستیار پژوهشی';
+  const bubble = document.createElement('div'); bubble.className = 'bubble'; bubble.textContent = String(text ?? '');
+  body.append(label, bubble);
+  if (options.actions) {
+    const actions = document.createElement('div'); actions.className = 'answer-tools';
+    const copy = document.createElement('button'); copy.type='button'; copy.className='tool-btn'; copy.append(icon('copy'), document.createTextNode('کپی پاسخ')); copy.addEventListener('click', copyAnswer);
+    const download = document.createElement('button'); download.type='button'; download.className='tool-btn'; download.append(icon('download'), document.createTextNode('ذخیرهٔ پاسخ')); download.addEventListener('click', downloadAnswer);
+    actions.append(copy, download); body.append(actions);
+  }
+  row.append(avatar, body);
+  if (options.sources && options.sources.length) body.append(buildSources(options.sources));
+  messages.append(row); renderIcons(row); scrollToLatest(); return row;
+}
+function buildSources(sources) {
+  const section = document.createElement('section'); section.className='sources-wrap';
+  const heading = document.createElement('div'); heading.className='sources-heading'; heading.append(icon('layers'), document.createTextNode('فیش‌ها و منابع مستند مورد استفاده'));
+  const grid = document.createElement('div'); grid.className='sources-grid';
+  sources.forEach((source, index) => {
+    const item = source && typeof source === 'object' ? source : {title: String(source ?? '')};
+    const card = document.createElement('article'); card.className='source-card';
+    const number = document.createElement('span'); number.className='source-number'; number.textContent = `منبع #${String(item.id ?? index + 1)}`;
+    const title = document.createElement('div'); title.className='source-title'; title.textContent = String(item.title ?? 'منبع بدون عنوان');
+    card.append(number, title);
+    if (item.snippet != null && String(item.snippet).trim()) { const snippet=document.createElement('div'); snippet.className='source-snippet'; snippet.textContent=String(item.snippet); card.append(snippet); }
+    grid.append(card);
+  });
+  section.append(heading, grid); return section;
+}
+function addTyping() {
+  const row=document.createElement('article'); row.className='message assistant'; row.id='typingMessage';
+  const avatar=document.createElement('div'); avatar.className='avatar'; avatar.setAttribute('aria-hidden','true'); avatar.append(icon('sparkles'));
+  const body=document.createElement('div'); body.className='message-body';
+  const label=document.createElement('div'); label.className='message-label'; label.textContent='دستیار پژوهشی';
+  const bubble=document.createElement('div'); bubble.className='bubble typing'; bubble.setAttribute('aria-label','در حال نگارش پاسخ');
+  for(let i=0;i<3;i++) bubble.append(document.createElement('span'));
+  body.append(label,bubble); row.append(avatar,body); messages.append(row); renderIcons(row); scrollToLatest(); return row;
+}
+function scrollToLatest() { requestAnimationFrame(() => { conversation.scrollTop = conversation.scrollHeight; }); }
+function getUrl() { return WEB_APP_URL; }
+async function askQuestion(text) {
+  const query = String(text ?? queryInput.value).trim();
+  if (!query) { showToast('لطفاً پرسش مورد نظر را بنویسید'); queryInput.focus(); return; }
+  if (sendBtn.disabled) return;
+  document.getElementById('welcome').hidden = true;
+  addMessage('user', query); queryInput.value=''; resizeInput(); sendBtn.disabled=true;
+  const typing=addTyping();
+  try {
+    const response = await fetch(getUrl(), {method:'POST', headers:{'Content-Type':'text/plain;charset=utf-8'}, body:JSON.stringify({action:'searchAndAnswer', query:query})});
+    const data = await response.json();
+    typing.remove();
+    if (data && data.status === 'success') {
+      latestAnswer = String(data.answer ?? '');
+      const sources = Array.isArray(data.sources) ? data.sources : [];
+      addMessage('assistant', latestAnswer, {actions:true, sources});
+    } else {
+      addMessage('assistant', `در پردازش پرسش مشکلی پیش آمد: ${String(data?.message ?? 'پاسخی دریافت نشد')}`);
+    }
+  } catch (err) {
+    typing.remove(); addMessage('assistant', `ارتباط با سرور برقرار نشد. لطفاً دوباره تلاش کنید.\n${String(err?.message ?? '')}`);
+  } finally { sendBtn.disabled=false; queryInput.focus(); }
+}
+function copyAnswer() {
+  if (!latestAnswer) { showToast('پاسخی برای کپی وجود ندارد'); return; }
+  const fallback = () => { const field=document.createElement('textarea'); field.value=latestAnswer; field.style.position='fixed'; field.style.opacity='0'; document.body.append(field); field.select(); try { document.execCommand('copy'); showToast('پاسخ در کلیپ‌بورد کپی شد'); } catch { showToast('کپی پاسخ ممکن نشد'); } field.remove(); };
+  if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(latestAnswer).then(() => showToast('پاسخ در کلیپ‌بورد کپی شد')).catch(fallback); else fallback();
+}
+function downloadAnswer() {
+  if (!latestAnswer) { showToast('پاسخی برای ذخیره وجود ندارد'); return; }
+  const blob=new Blob([latestAnswer],{type:'text/plain;charset=utf-8'}); const link=document.createElement('a'); const objectUrl=URL.createObjectURL(blob);
+  link.href=objectUrl; link.download=`پژوهش_${Date.now()}.txt`; document.body.append(link); link.click(); link.remove(); setTimeout(()=>URL.revokeObjectURL(objectUrl),1000);
+}
+function resizeInput() { queryInput.style.height='auto'; queryInput.style.height=`${Math.min(queryInput.scrollHeight,140)}px`; }
+document.getElementById('chatForm').addEventListener('submit', event => { event.preventDefault(); askQuestion(); });
+queryInput.addEventListener('keydown', event => { if(event.key==='Enter' && !event.shiftKey && !event.isComposing){event.preventDefault(); askQuestion();} });
+queryInput.addEventListener('input', resizeInput);
+document.querySelectorAll('.chip').forEach(chip => chip.addEventListener('click', () => askQuestion(chip.dataset.query)));
+async function uploadBulkData() {
+  const raw=document.getElementById('bulkText').value.trim(); const status=document.getElementById('uploadStatus'); const button=document.getElementById('uploadBtn');
+  if(!raw){showToast('لطفاً ابتدا متنی برای ذخیره وارد کنید');return;}
+  let items=[];
+  if(raw.startsWith('[')&&raw.endsWith(']')) { try { items=JSON.parse(raw); if(!Array.isArray(items)) throw new Error('JSON باید آرایه باشد'); } catch { showToast('فرمت JSON واردشده معتبر نیست'); return; } }
+  else { const chunks=raw.split('###').map(c=>c.trim()).filter(Boolean); items=chunks.map((chunk,index)=>{const lines=chunk.split('\n').filter(line=>line.trim());return {title:lines.length?lines[0].substring(0,50):`فیش شماره ${index+1}`,content:chunk};}); }
+  if(!items.length){showToast('فیشی برای ارسال پیدا نشد');return;}
+  button.disabled=true; status.textContent='در حال ارسال و ثبت داده‌ها…'; status.style.color='var(--brand)';
+  try {
+    const response=await fetch(getUrl(),{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify({action:'bulkAdd',items:items})});
+    const result=await response.json();
+    if(result.status==='success'){status.textContent=String(result.message ?? 'فیش‌ها با موفقیت ذخیره شدند');status.style.color='#16845f';document.getElementById('bulkText').value='';showToast('تمام فیش‌ها با موفقیت ذخیره شدند');}
+    else {status.textContent=`خطا: ${String(result.message ?? 'ثبت اطلاعات انجام نشد')}`;status.style.color='#c2414b';}
+  } catch(err){status.textContent=`خطا در برقراری ارتباط با سرور${err?.message ? `: ${String(err.message)}` : ''}`;status.style.color='#c2414b';}
+  finally {button.disabled=false;}
+}
+document.getElementById('uploadBtn').addEventListener('click',uploadBulkData);
+</script>
+</body>
+</html>
